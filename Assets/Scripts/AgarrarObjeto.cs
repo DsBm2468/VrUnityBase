@@ -9,6 +9,7 @@ public class AgarrarObjeto : MonoBehaviour
         if(other.tag == "ZonadeInteraccion")
         {
             other.GetComponentInParent<PickUpObject>().ObjectToPickUp = this.gameObject;
+            AudioManager.Instance.Play2D("Detectar"); //va el nombre del id que pusimos en unity
         }
     }
 
