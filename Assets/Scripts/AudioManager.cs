@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour, IaudioManager //I de interfaz
         }
 
         Instance = this;
-        DontDestroyOnload(gameObject);
+        DontDestroyOnLoad(gameObject);
 
         soundDictionary = new Dictionary<string, SoundData>();
 
@@ -52,7 +52,7 @@ public class AudioManager : MonoBehaviour, IaudioManager //I de interfaz
         GameObject go = new GameObject("Audio_" + sound.id);
         go.transform.position = position;
 
-        AudioSource sour = go.AddComponent<AudioSource>();
+        AudioSource source = go.AddComponent<AudioSource>();
         source.clip = sound.clip;
         source.volume = sound.volume;
         source.loop = sound.loop;
